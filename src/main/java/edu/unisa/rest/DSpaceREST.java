@@ -12,6 +12,7 @@ import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 
 import edu.unisa.entities.Describe;
+import edu.unisa.entities.Items;
 import edu.unisa.entities.Users;
 
 public abstract class DSpaceREST {
@@ -41,7 +42,7 @@ public abstract class DSpaceREST {
 	   
 	   static public Unmarshaller unmarshaller(String uri) throws JAXBException {
 		      if(null == _instanceUnmarshaller) {
-			    	JAXBContext context = JAXBContext.newInstance(Users.class,Describe.class);
+			    	JAXBContext context = JAXBContext.newInstance(Items.class, Users.class,Describe.class);
 		    	    _instanceUnmarshaller =  context.createUnmarshaller();
 		         
 		      }

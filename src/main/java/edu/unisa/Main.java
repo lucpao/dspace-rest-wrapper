@@ -14,9 +14,9 @@ import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 
-import edu.unisa.entities.User;
-import edu.unisa.entities.Users;
-import edu.unisa.rest.UserCalls;
+
+import edu.unisa.entities.*;
+import edu.unisa.rest.*;
 
 /**
  * Main class.
@@ -55,7 +55,15 @@ public class Main {
 					System.out.println(user.getEmail());
 					System.out.println(user.getFirstName());
 				}
-				
+				System.out.println(" ITEMS");
+				ItemCalls itemCalls = new ItemCalls(Main.BASE_URI, "paolino.luca@gmail.com", "indianamas");
+				Items items = (Items) itemCalls.get();
+    	    	Iterator<Item> itemIterator = items.getItems().iterator();
+				while(userIterator.hasNext()) {
+					Item item = itemIterator.next();
+					System.out.println(item.getId());
+					System.out.println(item.getHandle());
+				}
 
 			} catch (JAXBException e) {
 				// TODO Auto-generated catch block
