@@ -59,10 +59,17 @@ public class Main {
 				ItemCalls itemCalls = new ItemCalls(Main.BASE_URI, "paolino.luca@gmail.com", "indianamas");
 				Items items = (Items) itemCalls.get();
     	    	Iterator<Item> itemIterator = items.getItems().iterator();
+  
 				while(itemIterator.hasNext()) {
 					Item item = itemIterator.next();
 					System.out.println(item.getId());
 					System.out.println(item.getHandle());
+					Iterator<Metadata> metadataIterator = item.getMetadata().iterator();
+					while(metadataIterator.hasNext()) {
+						Metadata metadata = metadataIterator.next();
+						System.out.println("---> "+metadata);
+						
+					}
 				}
 
 			} catch (JAXBException e) {
