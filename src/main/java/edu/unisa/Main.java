@@ -24,8 +24,8 @@ import edu.unisa.rest.*;
  */
 public class Main {
     // Base URI the Grizzly HTTP server will listen on
-    public static final String BASE_URI = "http://localhost:8080/rest";
-
+    //public static final String BASE_URI = "http://localhost:8080/rest";
+    public static final String BASE_URI = "http://demo.lyncode.com:8080/rest";
     private static WebResource service;
     
 
@@ -59,7 +59,7 @@ public class Main {
 				ItemCalls itemCalls = new ItemCalls(Main.BASE_URI, "paolino.luca@gmail.com", "indianamas");
 				Items items = (Items) itemCalls.get();
     	    	Iterator<Item> itemIterator = items.getItems().iterator();
-				while(userIterator.hasNext()) {
+				while(itemIterator.hasNext()) {
 					Item item = itemIterator.next();
 					System.out.println(item.getId());
 					System.out.println(item.getHandle());
@@ -69,7 +69,7 @@ public class Main {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-    	    System.out.println(" second call");
+    	/*    System.out.println(" second call");
     	    User user;
 			try {
 				user = (User) userCalls.getById(1);
@@ -78,7 +78,7 @@ public class Main {
 			} catch (JAXBException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
+			}*/
 
     	    
     }
