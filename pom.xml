@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <name>dspace-rest-wrapper</name>
 <!-- comment -->
+<!-- commento daniela -->
     <dependencyManagement>
 
     </dependencyManagement>
