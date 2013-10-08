@@ -7,7 +7,6 @@ import javax.ws.rs.core.MediaType;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import edu.unisa.dspace.Exception.WrongTypeException;
 import edu.unisa.dspace.entities.response.users.User;
 import edu.unisa.dspace.entities.response.users.Users;
 import edu.unisa.dspace.util.DSpaceConnection;
