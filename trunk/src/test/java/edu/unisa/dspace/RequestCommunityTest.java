@@ -1,18 +1,14 @@
 package edu.unisa.dspace;
 
-import static org.junit.Assert.*;
-
-import java.util.ArrayList;
-
-import edu.unisa.dspace.Exception.WrongTypeException;
-import edu.unisa.dspace.entities.request.communities.*;
-import edu.unisa.dspace.rest.CommunityCalls;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import edu.unisa.dspace.Exception.WrongTypeException;
+import edu.unisa.dspace.entities.request.communities.CommunityRequest;
+import edu.unisa.dspace.rest.CommunityCalls;
 
 public class RequestCommunityTest {
 	CommunityRequest request = new CommunityRequest();
